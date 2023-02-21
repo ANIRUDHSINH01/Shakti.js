@@ -1,0 +1,35 @@
+{
+  "name": "shakti.js",
+  "version": "1.0.0",
+  "description": "shakti.js is the most powerful string package to create a discord bot with custom features having aoi.js features!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ANIRUDHSINH01/shakti.js.git"
+  },
+  "keywords": [
+    "discord.js",
+    "aoi.js",
+    "discord-bot",
+    "discord.ts",
+    "node.js",
+    "api",
+    "Shakti.js",
+    "meme",
+    "neko",
+    "image",
+    "Image Manipulation",
+    "@types/node"
+  ],
+  "author": "ANIRUDHSINH01",
+  "license": "MIT",
+  "homepage": "https://github.com/ANIRUDHSINH01/shakti.js",
+  "dependencies": {
+    "@types/node": "^18.0.6",
+    "aoi.js": "^6.0.0",
+    "node-fetch": "^2.0.0"
+  }
+}
