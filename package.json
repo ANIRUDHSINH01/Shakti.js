@@ -29,7 +29,7 @@
   "homepage": "https://github.com/ANIRUDHSINH01/shakti.js",
   "dependencies": {
     "@types/node": "^18.0.6",
-    "aoi.js": "^6.0.0",
+    "aoi.js": "^6.4.0",
     "node-fetch": "^2.0.0"
   }
 }
