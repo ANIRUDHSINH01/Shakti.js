@@ -16,6 +16,10 @@ class Plugins {
        code: `$teamOwnerID` 
      });
 
-  module.exports = { 
-   Plugins 
+}
+
+    }
+      
+module.exports = { 
+Plugins 
   }
