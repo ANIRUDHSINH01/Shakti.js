@@ -1,6 +1,6 @@
 {
   "name": "shakti.js",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "shakti.js is the most powerful string package to create a discord bot with custom features having aoi.js features!",
   "main": "index.js",
   "scripts": {
