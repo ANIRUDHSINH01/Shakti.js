@@ -6,18 +6,17 @@ class Plugins {
        process.exit(0); 
      } 
    } 
-   loadPlugins() { 
-     const bot = this.args.bot; 
+loadPlugins() { 
 
-      bot.functionManager.createFunction({ 
+const bot = this.args.bot; 
+
+bot.functionManager.createFunction({ 
        name: '$botOwnerID', 
        params: [""], 
        type: 'aoi.js', 
        code: `$teamOwnerID` 
      });
-# Aoi.js custom function
-### Code
-```js
+
 bot.functionManager.createFunction({
   name: "$emojiProgressBar",
   type: "djs",
