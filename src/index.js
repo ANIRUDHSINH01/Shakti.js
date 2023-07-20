@@ -18,6 +18,53 @@ bot.functionManager.createFunction({
      });
 
 bot.functionManager.createFunction({
+    name: "$commandExists",
+    type: "djs",
+    code: async function (d) {
+        const data = d.util.aoiFunc(d);
+        const [name, type] = data.inside.splits;
+        if (!name)
+            return d.aoiError.fnError(d, "custom", {}, "Missing command name in");
+        if (!d.client.cmd.types.includes(type))
+            return d.aoiError.fnError(d, "custom", {}, "Invalid command type provided in");
+        data.result = d.client.cmd[type].some(x => x.name.toLowerCase() === name.toLowerCase());
+        return {
+            code: d.util.setCode(data)
+        }
+    }
+});
+   
+bot.functionManager.createFunction({
+  name: "$fileNames",
+  type: "djs",
+  code: async (d) => {
+    const data = d.util.aoiFunc(d);
+    const [category, separator = ", "] = data.inside.splits;
+    
+    const fs = require('fs');
+    const path = require('path');
+    const folderPath = path.join(__dirname, 'commands', category);
+    
+    let files = [];
+    let output = '';
+    
+    try {
+      files = fs.readdirSync(folderPath);
+      output = files
+        .filter((file) => file !== '$alwaysExecute.js')
+        .map((file) => path.parse(file).name)
+        .join(separator);
+    } catch (err) {
+      output = `Error reading folder ${folderPath}: ${err}`;
+    }
+    
+    data.result = output;
+    
+    return { code: d.util.setCode(data) };
+  }
+});
+
+bot.functionManager.createFunction({
   name: "$emojiProgressBar",
   type: "djs",
   code: async (d) => {
