@@ -14,7 +14,7 @@ bot.functionManager.createFunction({
        name: '$botOwnerID', 
        params: [""], 
        type: 'aoi.js', 
-       code: `$teamOwnerID` 
+       code: `$clientOwnerIDs` 
      });
 
 bot.functionManager.createFunction({
